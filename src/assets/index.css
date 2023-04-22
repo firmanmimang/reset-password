@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* input style */
+  .input {
+    @apply text-sm px-4 py-3 rounded-lg w-full bg-gray-200 focus:bg-gray-100 border border-gray-200 focus:outline-none transition duration-200
+  }
+  .icon-input{
+    @apply flex items-center absolute top-4 right-0 mr-3 text-sm leading-5;
+  }
+  .error-input{
+    @apply text-sm pl-1 text-poor;
+  }
+  /* bars strength password style */
+  .bars {
+    @apply bg-gray-200 flex flex-1 items-center gap-2 h-[6px] rounded;
+  }
+  .bars > div {
+    @apply h-[6px] rounded transition-all duration-300 w-[0%];
+  }
+  .bars.poor > div {
+    @apply bg-poor w-1/3;
+  }
+  .bars.good > div {
+    @apply bg-good w-2/3;
+  }
+  .bars.strong > div {
+    @apply bg-strong w-full;
+  }
+}
